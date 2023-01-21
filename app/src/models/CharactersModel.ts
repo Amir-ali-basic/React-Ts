@@ -6,12 +6,14 @@ export class CharacterModel implements ICharacter{
     status: string;
     species: string;
     gender: string;
+    image: string;
 
     constructor(data:ICharacter){
         this.id = data.id;
         this.name = data.name;
         this.status = data.status;
         this.species = data.species;
-        this.gender = data.gender
+        this.gender = data.gender;
+        this.image = data.image;
     }
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import fetchCharactersAPI from "../services/api";
 import { CharacterViewModel } from "../viewModels/CharactrsVm";
 import { useSelector, useDispatch } from 'react-redux';
+import Character from "./Character";
 
 
 function CharacterList ()  {
@@ -19,29 +20,23 @@ function CharacterList ()  {
   
     const viewModel = new CharacterViewModel(characters);
     const { allCharacters, aliveCharacters, deadCharacters } = viewModel;
+    console.log("allCharacters", viewModel)
   
   return (
     <div>
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <div>
-          <h2>All Characters</h2>
-          {allCharacters.length !== 0 &&
-            allCharacters.map((character) => (
-              <div key={character.id}>
-                <p>{character.name}</p>
-                <p>Status: {character.status}</p>
-              </div>
-            ))}
+        <div className="characters">
+          <div className="alive">
           <h2>Alive Characters</h2>
-          {aliveCharacters.length !== 0 &&
-            aliveCharacters.map((character) => (
-              <div key={character.id}>
-                <p>{character.name}</p>
-                <p>Status: {character.status}</p>
-              </div>
-            ))}
+          <Character characters={aliveCharacters} isDisabled={false}/>
+          </div>
+          <div className="dead">
+          <h2>Dead Characters</h2>
+          <Character characters={deadCharacters} isDisabled={true}/>
+          </div>
+
         </div>
       )}
     </div>
