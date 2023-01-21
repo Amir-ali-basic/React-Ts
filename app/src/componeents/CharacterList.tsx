@@ -1,30 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { CharacterModel } from "../models/CharactersModel";
-import useCharacters from "../store/CharacterStore";
+import fetchCharactersAPI from "../services/api";
 import { CharacterViewModel } from "../viewModels/CharactrsVm";
+import { useSelector, useDispatch } from 'react-redux';
 
-interface Props {}
 
-const CharacterList: React.FC<Props> = () => {
-  const [allCharacters, setAllCharacters] = useState([] as CharacterModel[]);
-  const [aliveCharacters, setAliveCharacters] = useState(
-    [] as CharacterModel[]
-  );
-  const [deadCharacters, setDeadCharacters] = useState([] as CharacterModel[]);
-  const [isLoading, setLoading] = useState(true as Boolean);
+function CharacterList ()  {
+    const characters = useSelector((state:any) => state.characters);
+    const isLoading = useSelector((state:any) => state.isLoading);
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const characters = await useCharacters.fetchCharacters();
-      setAllCharacters(characters);
-      const viewModel = new CharacterViewModel(characters);
-      setAliveCharacters(viewModel.aliveCharacters);
-      setDeadCharacters(viewModel.deadCharacters);
-      setLoading(viewModel.isLoading);
-    };
-    fetchData();
-  }, []);
-
+    useEffect(() => {
+        dispatch(fetchCharactersAPI() as any);
+    }, [dispatch]);
+  
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+  
+    const viewModel = new CharacterViewModel(characters);
+    const { allCharacters, aliveCharacters, deadCharacters } = viewModel;
+  
   return (
     <div>
       {isLoading ? (

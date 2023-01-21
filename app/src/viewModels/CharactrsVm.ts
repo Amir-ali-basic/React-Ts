@@ -8,15 +8,15 @@ export class CharacterViewModel {
   
     constructor(characters: CharacterModel[]) {
         this.allCharacters = characters;
-        this.setAlives();
-        this.setDeads();
+        this.aliveCharacters = this.setAlives();
+        this.deadCharacters = this.setDeads();
         this.isLoading = false;
     }
     setAlives() {
-        this.aliveCharacters = this.allCharacters.filter((character) => character.status === "Alive");
+        return this.allCharacters.filter((character) => character.status === "Alive");
     }
     setDeads() {
-        this.deadCharacters = this.allCharacters.filter((character) => character.status === "Dead");
+        return this.allCharacters.filter((character) => character.status === "Dead");
     }
 }
 
