@@ -1,5 +1,8 @@
 import { FETCH_CHARACTERS_REQUEST, FETCH_CHARACTERS_SUCCESS, FETCH_CHARACTERS_FAILURE } from '../actions/actionsTypes';
-
+// The reducer is a pure function that takes the current state of the application and an action, 
+// and returns the next state of the application.
+// It is responsible for updating the store based on the actions it receives. 
+// It receives the current state and an action, and returns the next state.
 const initialState = {
   characters: [],
   isLoading: false,

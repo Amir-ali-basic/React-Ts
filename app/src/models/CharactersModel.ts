@@ -1,5 +1,7 @@
 import { ICharacter } from "../interfaces/ICharacter";
-
+// A model is a representation of data or a business logic in an application. 
+// It contains the data and the logic for manipulating that data. 
+// It is responsible for handling data and providing it to the other components.
 export class CharacterModel implements ICharacter{
     id: number;
     name: string;
