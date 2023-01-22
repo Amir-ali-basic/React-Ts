@@ -27,7 +27,7 @@ function CharacterList ()  {
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <div className="characters">
+        <div className="characters d-flex flex-row justify-content-center gap-10">
           <div className="alive">
           <h2>Alive Characters</h2>
           <Character characters={aliveCharacters} isDisabled={false}/>
