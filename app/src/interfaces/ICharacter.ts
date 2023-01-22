@@ -2,10 +2,10 @@
 // An interface defines the blueprint for a class,
 // but does not provide any implementation for the methods or properties.
 export interface ICharacter {
-  id: number;
-  name: string;
-  status: string;
-  species: string;
-  gender: string;
-  image: string;
+  id: number | null;
+  name: string | "";
+  status: string | "";
+  species: string | "";
+  gender: string | "";
+  image: string | "";
 }
