@@ -1,8 +1,8 @@
 import { ComponentStory } from "@storybook/react";
-import Character from "../componeents/Character";
+import Character from "../components/Character";
 
 export default {
-  title: "Example/Character",
+  title: "Fullet/Character",
   component: Character,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout

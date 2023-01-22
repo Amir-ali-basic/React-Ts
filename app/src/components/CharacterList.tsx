@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import fetchCharactersAPI from "../services/api";
 import { CharacterViewModel } from "../viewModels/CharactrsVm";
 import { useSelector, useDispatch } from "react-redux";
