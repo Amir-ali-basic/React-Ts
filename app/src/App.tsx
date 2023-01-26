@@ -1,11 +1,14 @@
 import React from "react";
 import "./App.scss";
-import CharacterList from "./components/CharacterList";
+import { NavBar } from "./components";
+import Landing from "./components/home/Landing";
+import { links } from "./mocks/NavBarData";
 
 function App() {
   return (
     <div className="App">
-      <CharacterList />
+      <NavBar links={links} />
+      <Landing />
     </div>
   );
 }

@@ -1,3 +1,21 @@
 //every folder form style shuold have only one export and you import everything here
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "bootstrap/dist/css/bootstrap.min.css";
+
 @import "./assets/style/components/_character.scss";
 @import "./assets/style/layout/_grid.scss";
+@import "./assets//style/components/_navbar";
+@import "./assets//style/components/_landing";
+
+@import "./assets//style/base/_base";
+* {
+  font-family: "Urbanist", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #05041c;
+  width: 100%;
+}

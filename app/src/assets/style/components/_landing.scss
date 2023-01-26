@@ -1,0 +1,67 @@
+.landing {
+  height: 100%;
+  .landing-left {
+    height: 60%;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    h1 {
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 96px;
+      line-height: 110px;
+      color: #ffffff;
+    }
+    .landing-input {
+      width: 80%;
+      height: 65px;
+      .input {
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        box-shadow: 0px 15px 30px rgba(193, 193, 193, 0.25);
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+        .img {
+          height: 100%;
+          width: 25%;
+        }
+        input {
+          height: 100%;
+          width: 50%;
+          outline: none;
+          border: none;
+        }
+        .button-apply {
+          width: 25%;
+          background: #281965;
+          border-radius: 30px;
+          height: 80%;
+          font-family: "Urbanist";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 32px;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+      .input-text {
+        P {
+          font-family: "Urbanist";
+          font-style: italic;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 26px;
+          color: #907bff;
+        }
+      }
+    }
+  }
+  .landing-right {
+    width: 40%;
+  }
+}

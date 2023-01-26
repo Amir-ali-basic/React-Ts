@@ -16,13 +16,15 @@ function CharacterList() {
   if (isLoading) {
     return <div>Loading...</div>;
   }
-
   const viewModel = new CharacterViewModel(characters);
   const { allCharacters, aliveCharacters, deadCharacters } = viewModel;
-  console.log("allCharacters", viewModel);
+  const showMessage = () => {
+    viewModel.showMessage();
+  };
 
   return (
     <div>
+      <button onClick={showMessage}>Show me message</button>
       {isLoading ? (
         <div>Loading...</div>
       ) : (

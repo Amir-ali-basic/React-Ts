@@ -1,13 +1,39 @@
 // layout: contains styles that dictate the overall layout of the site, such as grid and spacing
 
-.d-flex{
-    display: flex;
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
 }
 
-.flex-row{
-    flex-direction: row;
+.justify-content-center {
+  justify-content: center;
 }
 
-.justify-content-center{
-    justify-content: center;
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.list-style-none {
+  list-style: none;
+}
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.gap-56 {
+  gap: 56px;
 }

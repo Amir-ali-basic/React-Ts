@@ -1,4 +1,3 @@
-import { CharacterModel } from "../../models/CharactersModel";
 import { CharacterViewModel } from "../../viewModels/CharactrsVm";
 
 describe("CharacterViewModel", () => {

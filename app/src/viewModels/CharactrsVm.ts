@@ -3,6 +3,7 @@ import { CharacterModel } from "../models/CharactersModel";
 //  it handle the communication between the two.
 //  It's responsible for providing the data to the view and updating the view when the model changes.
 //  It also handle the validation, business logic and any other functionality that is required for the view.
+//MVVM
 export class CharacterViewModel {
   allCharacters = [] as CharacterModel[];
   aliveCharacters = [] as CharacterModel[];
@@ -24,5 +25,8 @@ export class CharacterViewModel {
     return this.allCharacters.filter(
       (character) => character.status === "Dead"
     );
+  }
+  showMessage() {
+    alert("Show message called");
   }
 }

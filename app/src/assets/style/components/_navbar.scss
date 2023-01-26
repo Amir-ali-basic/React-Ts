@@ -1,0 +1,73 @@
+//navbar need to be responsive
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .nav-container {
+    height: 108px;
+    .nav-logo {
+      width: 15%;
+      height: 100%;
+    }
+    .nav-links {
+      width: 85%;
+      height: 100%;
+      ul {
+        margin: 0;
+        li {
+          a {
+            //can be separate class
+            font-family: "Urbanist";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #9a99ad;
+          }
+          .active {
+            color: #ffffff;
+          }
+          .line {
+            height: 3px;
+            width: 30%;
+            background: linear-gradient(180deg, #3461ff 0%, #8454eb 100%);
+            border-radius: 4px;
+            margin: auto;
+          }
+        }
+      }
+    }
+    .nav-search {
+      width: 235px; //change this line
+      position: relative;
+      background-color: transparent;
+      border-radius: 56px;
+      height: 48px;
+      filter: drop-shadow(0px 13px 17px rgba(119, 87, 239, 0.2));
+      border: 1.5px solid rgb(181, 152, 243);
+      &:active {
+        filter: drop-shadow(0px 13px 17px rgba(119, 87, 239, 0.2));
+        border: 1.5px solid rgb(181, 152, 243);
+      }
+      img {
+        height: 32px;
+      }
+      //input can be separate component
+      input {
+        width: 80%;
+        border: none;
+        background-color: transparent;
+        outline: none;
+      }
+      .nav-icon {
+        position: absolute;
+      }
+    }
+    .nav-button {
+      width: 110px;
+      height: 48px;
+    }
+  }
+}
